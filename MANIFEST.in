@@ -1,5 +1,6 @@
 include README.md
 include requirements.txt
+include turtlpy/libturtl_core*
 recursive-include tests *
 recursive-exclude tests *.pyc
 include environment.yml
