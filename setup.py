@@ -13,11 +13,6 @@ def read(fname):
         content = fp.read()
     return content
 
-def read_yaml(fname):
-    with open(path.join(here,fname)) as fp:
-        content = yaml.load(fp)
-    return content
-
 # Get the long description from the README file
 long_description = read(readme_file)
 
@@ -40,7 +35,7 @@ all_reqs += read(pip_req_file).splitlines()
 turtlpy_core_ext = Extension(
     name="turtlpy.core",
     sources=["turtlpy/turtle_core.pyx"],
-    libraries=["turtl_core.linux64"],
+    libraries=["turtl_core"],
     library_dirs=["./turtlpy"],
     include_dirs=[]
 )
@@ -50,7 +45,7 @@ dependency_links = [x.strip() for x in all_reqs if x.startswith('git+')]
 setup(
     name='turtlpy',
     version_format='{tag}.dev{commitcount}+{gitsha}',
-    setup_requires=['setuptools-git-version','pytest-runner'],
+    setup_requires=['setuptools-git-version','pytest-runner','cython'],
     description='Python client for the Turtl Note App System. This is basically a wrapper around the turtl-core. Useful for backing up or building interfaces to other note taking apps.',
     long_description=long_description,
     classifiers=[
