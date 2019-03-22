@@ -1,0 +1,153 @@
+2019-03-23T00:06:20 - [INFO][turtl_core] main::init() -- init with user config {"api": {"endpoint": "https://notes.dietzi.mywire.org"}}
+2019-03-23T00:06:20 - [INFO][turtl_core] main::init() -- created data folder: ~/.config/turtlpy
+2019-03-23T00:06:20 - [INFO][turtl_core] main::start() -- begin
+2019-03-23T00:06:20 - [INFO][turtl_core] main::start() -- locking data dir: ~/.config/turtlpy/run.lock
+2019-03-23T00:06:20 - [DEBUG][turtl_core::models::model] model -- set_client_id(): 4d728b92f340a730350117b333959683757ed861733ac1b90aa02e3fdf31ee81
+2019-03-23T00:06:20 - [INFO][turtl_core::messaging] messaging::start() -- main loop
+2019-03-23T00:06:20 - [INFO][turtl_core::messaging] messaging::ui_event() -- messaging:ready
+2019-03-23T00:06:20 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:06:20 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:06:20 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:06:20 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:06:20 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:06:20 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:06:20 - [INFO][turtl_core] main::init() -- init with user config {"api": {"endpoint": "https://notes.dietzi.mywire.org"}}
+2019-03-23T00:06:20 - [INFO][turtl_core] main::init() -- created data folder: ~/.config/turtlpy
+2019-03-23T00:06:20 - [INFO][turtl_core] main::start() -- begin
+2019-03-23T00:06:20 - [INFO][turtl_core] main::start() -- locking data dir: ~/.config/turtlpy/run.lock
+2019-03-23T00:06:20 - [ERROR][turtl_core] main::start() -- cannot lock ~/.config/turtlpy/run.lock ...another instance of turtl is likely running
+2019-03-23T00:06:20 - [ERROR][turtl_core] main::start() -- {"err":{"message":"Resource temporarily unavailable (os error 11)","type":"io_error"},"file":"src/lib.rs","line":149,"wrapped":true}
+2019-03-23T00:08:04 - [INFO][turtl_core] main::init() -- init with user config {"api": {"endpoint": "https://notes.dietzi.mywire.org"}}
+2019-03-23T00:08:04 - [INFO][turtl_core] main::init() -- created data folder: ~/.config/turtlpy
+2019-03-23T00:08:04 - [INFO][turtl_core] main::start() -- begin
+2019-03-23T00:08:04 - [INFO][turtl_core] main::start() -- locking data dir: ~/.config/turtlpy/run.lock
+2019-03-23T00:08:04 - [DEBUG][turtl_core::models::model] model -- set_client_id(): 4d728b92f340a730350117b333959683757ed861733ac1b90aa02e3fdf31ee81
+2019-03-23T00:08:04 - [INFO][turtl_core::messaging] messaging::start() -- main loop
+2019-03-23T00:08:04 - [INFO][turtl_core::messaging] messaging::ui_event() -- messaging:ready
+2019-03-23T00:08:04 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:08:04 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:08:04 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:08:04 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:08:04 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:08:04 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:08:54 - [INFO][turtl_core] main::init() -- init with user config {"api": {"endpoint": "https://apiv3.turtlapp.com"}}
+2019-03-23T00:08:54 - [INFO][turtl_core] main::init() -- created data folder: ~/.config/turtlpy
+2019-03-23T00:08:54 - [INFO][turtl_core] main::start() -- begin
+2019-03-23T00:08:54 - [INFO][turtl_core] main::start() -- locking data dir: ~/.config/turtlpy/run.lock
+2019-03-23T00:08:54 - [DEBUG][turtl_core::models::model] model -- set_client_id(): 4d728b92f340a730350117b333959683757ed861733ac1b90aa02e3fdf31ee81
+2019-03-23T00:08:54 - [INFO][turtl_core::messaging] messaging::start() -- main loop
+2019-03-23T00:08:54 - [INFO][turtl_core::messaging] messaging::ui_event() -- messaging:ready
+2019-03-23T00:08:54 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:08:54 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:08:54 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:08:54 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:08:54 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:08:54 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:09:03 - [INFO][turtl_core] main::init() -- init with user config {"api": {"endpoint": "https://apiv3.turtlapp.com"}}
+2019-03-23T00:09:03 - [INFO][turtl_core] main::init() -- created data folder: ~/.config/turtlpy
+2019-03-23T00:09:03 - [INFO][turtl_core] main::start() -- begin
+2019-03-23T00:09:03 - [INFO][turtl_core] main::start() -- locking data dir: ~/.config/turtlpy/run.lock
+2019-03-23T00:09:03 - [DEBUG][turtl_core::models::model] model -- set_client_id(): 4d728b92f340a730350117b333959683757ed861733ac1b90aa02e3fdf31ee81
+2019-03-23T00:09:03 - [INFO][turtl_core::messaging] messaging::start() -- main loop
+2019-03-23T00:09:03 - [INFO][turtl_core::messaging] messaging::ui_event() -- messaging:ready
+2019-03-23T00:09:03 - [INFO][turtl_core::dispatch] dispatch(login_msg): user:login
+2019-03-23T00:09:03 - [INFO][turtl_core::models::user] user::generate_auth() -- generating v0 auth
+2019-03-23T00:09:03 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:09:03 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:09:03 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:09:03 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:09:03 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:09:03 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:09:03 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:09:03 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:09:03 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:09:03 - [DEBUG][turtl_core::api] api::req() -- begin: POST /auth
+2019-03-23T00:09:03 - [DEBUG][turtl_core::api] api::call() -- creating new client with cachekey 
+2019-03-23T00:09:03 - [DEBUG][turtl_core::api] api::call() -- req: POST https://apiv3.turtlapp.com/auth
+2019-03-23T00:09:29 - [INFO][turtl_core] main::init() -- init with user config {"api": {"endpoint": "https://apiv3.turtlapp.com"}}
+2019-03-23T00:09:29 - [INFO][turtl_core] main::init() -- created data folder: ~/.config/turtlpy
+2019-03-23T00:09:29 - [INFO][turtl_core] main::start() -- begin
+2019-03-23T00:09:29 - [INFO][turtl_core] main::start() -- locking data dir: ~/.config/turtlpy/run.lock
+2019-03-23T00:09:29 - [DEBUG][turtl_core::models::model] model -- set_client_id(): 4d728b92f340a730350117b333959683757ed861733ac1b90aa02e3fdf31ee81
+2019-03-23T00:09:29 - [INFO][turtl_core::messaging] messaging::start() -- main loop
+2019-03-23T00:09:29 - [INFO][turtl_core::messaging] messaging::ui_event() -- messaging:ready
+2019-03-23T00:09:29 - [INFO][turtl_core::dispatch] dispatch(login_msg): user:login
+2019-03-23T00:09:29 - [INFO][turtl_core::models::user] user::generate_auth() -- generating v0 auth
+2019-03-23T00:09:29 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:09:29 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:09:29 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:09:29 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:09:29 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:09:29 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:09:29 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:09:29 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:09:29 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:09:29 - [DEBUG][turtl_core::api] api::req() -- begin: POST /auth
+2019-03-23T00:09:29 - [DEBUG][turtl_core::api] api::call() -- creating new client with cachekey 
+2019-03-23T00:09:29 - [DEBUG][turtl_core::api] api::call() -- req: POST https://apiv3.turtlapp.com/auth
+2019-03-23T00:09:53 - [INFO][turtl_core] main::init() -- init with user config {"api": {"endpoint": "https://apiv3.turtlapp.com"}}
+2019-03-23T00:09:53 - [INFO][turtl_core] main::init() -- created data folder: ~/.config/turtlpy
+2019-03-23T00:09:53 - [INFO][turtl_core] main::start() -- begin
+2019-03-23T00:09:53 - [INFO][turtl_core] main::start() -- locking data dir: ~/.config/turtlpy/run.lock
+2019-03-23T00:09:53 - [DEBUG][turtl_core::models::model] model -- set_client_id(): 4d728b92f340a730350117b333959683757ed861733ac1b90aa02e3fdf31ee81
+2019-03-23T00:09:53 - [INFO][turtl_core::messaging] messaging::start() -- main loop
+2019-03-23T00:09:53 - [INFO][turtl_core::messaging] messaging::ui_event() -- messaging:ready
+2019-03-23T00:09:53 - [INFO][turtl_core::dispatch] dispatch(login_msg): user:login
+2019-03-23T00:09:53 - [INFO][turtl_core::models::user] user::generate_auth() -- generating v0 auth
+2019-03-23T00:09:53 - [DEBUG][turtl_core::api] api::req() -- begin: POST /auth
+2019-03-23T00:09:53 - [DEBUG][turtl_core::api] api::call() -- creating new client with cachekey 
+2019-03-23T00:09:53 - [DEBUG][turtl_core::api] api::call() -- req: POST https://apiv3.turtlapp.com/auth
+2019-03-23T00:09:54 - [DEBUG][turtl_core::api] api::call() -- call error: {"err":{"message":{"error":{"message":"bad login: tobias.schoch@vtxmail.ch"}},"subtype":"Forbidden","type":"api"},"file":"src/api.rs","line":168,"wrapped":true}
+2019-03-23T00:09:54 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:09:54 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:09:54 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:09:54 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:09:54 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:09:54 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:09:54 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:09:54 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:09:54 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:11:28 - [INFO][turtl_core] main::init() -- init with user config {"api": {"endpoint": "https://apiv3.turtlapp.com"}}
+2019-03-23T00:11:28 - [INFO][turtl_core] main::init() -- created data folder: ~/.config/turtlpy
+2019-03-23T00:11:28 - [INFO][turtl_core] main::start() -- begin
+2019-03-23T00:11:28 - [INFO][turtl_core] main::start() -- locking data dir: ~/.config/turtlpy/run.lock
+2019-03-23T00:11:28 - [DEBUG][turtl_core::models::model] model -- set_client_id(): 4d728b92f340a730350117b333959683757ed861733ac1b90aa02e3fdf31ee81
+2019-03-23T00:11:28 - [INFO][turtl_core::messaging] messaging::start() -- main loop
+2019-03-23T00:11:28 - [INFO][turtl_core::messaging] messaging::ui_event() -- messaging:ready
+2019-03-23T00:11:28 - [INFO][turtl_core::dispatch] dispatch(login_msg): user:login
+2019-03-23T00:11:28 - [INFO][turtl_core::models::user] user::generate_auth() -- generating v0 auth
+2019-03-23T00:11:28 - [DEBUG][turtl_core::api] api::req() -- begin: POST /auth
+2019-03-23T00:11:28 - [DEBUG][turtl_core::api] api::call() -- creating new client with cachekey 
+2019-03-23T00:11:28 - [DEBUG][turtl_core::api] api::call() -- req: POST https://apiv3.turtlapp.com/auth
+2019-03-23T00:11:29 - [DEBUG][turtl_core::api] api::call() -- call error: {"err":{"message":{"error":{"message":"bad login: tobias.schoch@vtxmail.ch"}},"subtype":"Forbidden","type":"api"},"file":"src/api.rs","line":168,"wrapped":true}
+2019-03-23T00:11:29 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:11:29 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:11:29 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:11:29 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:11:29 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:11:29 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:11:29 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:11:29 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:11:29 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:11:44 - [INFO][turtl_core] main::init() -- init with user config {"api": {"endpoint": "https://apiv3.turtlapp.com"}}
+2019-03-23T00:11:44 - [INFO][turtl_core] main::init() -- created data folder: ~/.config/turtlpy
+2019-03-23T00:11:44 - [INFO][turtl_core] main::start() -- begin
+2019-03-23T00:11:44 - [INFO][turtl_core] main::start() -- locking data dir: ~/.config/turtlpy/run.lock
+2019-03-23T00:11:44 - [DEBUG][turtl_core::models::model] model -- set_client_id(): 4d728b92f340a730350117b333959683757ed861733ac1b90aa02e3fdf31ee81
+2019-03-23T00:11:44 - [INFO][turtl_core::messaging] messaging::start() -- main loop
+2019-03-23T00:11:44 - [INFO][turtl_core::messaging] messaging::ui_event() -- messaging:ready
+2019-03-23T00:11:44 - [INFO][turtl_core::dispatch] dispatch(login_msg): user:login
+2019-03-23T00:11:44 - [INFO][turtl_core::models::user] user::generate_auth() -- generating v0 auth
+2019-03-23T00:11:44 - [DEBUG][turtl_core::api] api::req() -- begin: POST /auth
+2019-03-23T00:11:44 - [DEBUG][turtl_core::api] api::call() -- creating new client with cachekey 
+2019-03-23T00:11:44 - [DEBUG][turtl_core::api] api::call() -- req: POST https://apiv3.turtlapp.com/auth
+2019-03-23T00:11:45 - [DEBUG][turtl_core::api] api::call() -- call error: {"err":{"message":{"error":{"message":"bad login: tobias.schoch@vtxmail.ch"}},"subtype":"Forbidden","type":"api"},"file":"src/api.rs","line":168,"wrapped":true}
+2019-03-23T00:11:45 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:11:45 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:11:45 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:11:45 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:11:45 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:11:45 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong
+2019-03-23T00:11:45 - [INFO][turtl_core::dispatch] dispatch(ping): ping
+2019-03-23T00:11:45 - [INFO][turtl_core::dispatch] ping!
+2019-03-23T00:11:45 - [INFO][turtl_core::messaging] messaging::ui_event() -- pong

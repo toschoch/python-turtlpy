@@ -1,75 +1,58 @@
 import turtlpy.core as core
-import yaml
+import json
+import logging
+
+log = logging.getLogger(__name__)
 
 
-class TurtlClient(object):
+def _send_command(msg_id, cmd, *args):
+    r = core.send(bytes(json.dumps([msg_id, cmd] + list(args)),'utf-8'))
+    log.debug("send command '{}'... ({})".format(cmd, r))
+    return r
 
-    def __init__(self, server, server_v2=None):
-        config = """---
-# set to `true` if you want errors to be wrapped in an object that includes the
-# file/line number. nice for testing, probably annoying when actually using the
-# core
-wrap_errors: false
 
-messaging:
-  # the channel our request/response dialog happens on
-  reqres: "inproc://turtl-req"
-  # the channel used to send events from the core to the UI
-  events: "inproc://turtl-events"
-  # if true, the reqres channel responses will vary by the message id. so if you
-  # set a message id of 53 and this is `true`, and messaging.reqres is
-  # "turtl-req" then the response will come back on the channel "turtl-req:53"
-  #
-  # if this is false, the responses will come back on "turtl-req" and each
-  # response message will have a message id you can use to match.
-  reqres_append_mid: false
+def start(server, server_v2=None):
 
-# override w/ runtime config! on desktop this should be a subfolder in the user
-# folder. in android it should be the location of the app's data folder.
-data_folder: '/tmp/turtl'
+    config = {
+        'api': {
+            'endpoint': server,
+        },
+        #"openssl_cert_file": "/opt/turtl/resources/app/scripts/resources/cacert.pem"
+    }
 
-# logging configuration
-logging:
-  # the log level (ignore all messages with a log level lower than this)
-  level: 'info'
-  # the file to log to. if missing, logging will just be stdout
-  file: 'core.log'
-  # log rotation, only applies if `logging.file` is set
-  rotation:
-    keep: 3
-    size: 1048576
+    if server_v2 is not None:
+        config['api']['v6'] = {'endpoint': server_v2}
 
-api:
-  endpoint: "https://apiv3.turtlapp.com"
-  # this should be set by the client loading the core. standard format is
-  # <platform>/<version>, like "android/0.7.0"
-  client_version_string: 'core'
-  # defines the proxy server we use for all outgoing connections. format is
-  # <ip/host>:<port>: eg "10.67.23.144:6777"
-  proxy: null
-  # accept invalid certs
-  allow_invalid_ssl: false
-  # point this at a v0.6 api (the old lisp server) if you want to enable
-  # migration from the old system to the new.
-  v6:
-    endpoint: "https://api.turtlapp.com/v2"
-
-sync:
-  enable_incoming: true
-  enable_outgoing: true
-  enable_files_incoming: true
-  enable_files_outgoing: true
-  poll_timeout: 25
-
-# configuration integration tests
-integration_tests:
-  data_folder: /tmp/turtl/integration
-  login:
-    username: testdata@turtlapp.com
-    password: omgitsatest
-  v6_login:
-    username: 'duck duck'
-    password: 'juice'
-"""
-        config = yaml.load(config, yaml.CLoader)
+    if not ping_pong():
+        log.info("trying to start turtl core...")
         core.start(config)
+        r = core.recv_event(True)
+        log.debug("received event {}".format(r))
+        return 'e' in r and ['e'] == "messaging:ready"
+    else:
+        log.info("turtl core is already running...")
+        return 0
+
+
+def login(user, pw, id="login_msg"):
+    r = _send_command(id, "user:login", user, pw)
+    if r != 0: return False
+    r2 = core.recv(True)
+    log.debug("login returned: {}".format(r2))
+    return r2['e']==0
+
+
+def logout(clear_cookie=True, id="logout_msg"):
+    return _send_command(id, "user:logout", clear_cookie)
+
+
+def sync_status(id="sync_status_msg"):
+    return _send_command(id, "")
+
+
+def ping_pong(id="ping"):
+    r = _send_command(id, "ping")
+    if r != 0: return False
+    r2 = core.recv(block=True)
+    log.debug("ping returned: {}".format(r2))
+    return r2['id']=='ping' and r2['e']==0 and r2['d']=='pong'
