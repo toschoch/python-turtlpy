@@ -1,6 +1,9 @@
 Turtl Note Client
 ===============================
+[![Build Status](https://drone.github.dietzi.mywire.org/api/badges/toschoch/python-turtlpy/status.svg)](https://drone.github.dietzi.mywire.org/toschoch/python-turtlpy)
+
 author: Tobias Schoch
+
 
 Overview
 --------
