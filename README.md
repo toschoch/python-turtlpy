@@ -35,6 +35,9 @@ Or clone the repo:
 Usage
 -----
 
+see [tests](tests/test_client.py)
+
+
 ```python
     with TurtlClient("http://<server-url>", "<username>", "<password>") as client:
         # user profile
