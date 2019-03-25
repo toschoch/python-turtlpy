@@ -5,17 +5,22 @@ log = logging.getLogger(__name__)
 
 class User(object):
 
-    def __init__(self, body, id, color, invites, members, title, user_id):
+    def __init__(self,
+                 username,
+                 privkey,
+                 pubkey,
+                 settings,
+                 id,
+                 confirmed=False,
+                 body=None):
+
+        self.username = username
+        self.privkey = privkey
+        self.pubkey = pubkey
+        self.settings = settings
         self.body = body
         self.id = id
-        self.color = color
-        self.invites = invites
-        self.members = members
-        self.title = title
-        self.user_id = user_id
+        self.confirmed = confirmed
 
     def __eq__(self, other):
-        return self.title == other
-
-    def __str__(self):
-        return self.__dict__.__str__()
+        return self.username == other

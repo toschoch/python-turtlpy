@@ -15,6 +15,3 @@ class Board(object):
 
     def __eq__(self, other):
         return self.title == other
-
-    def __str__(self):
-        return self.__dict__.__str__()
