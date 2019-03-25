@@ -1,9 +1,9 @@
+from .common import Model
 import logging
 
 log = logging.getLogger(__name__)
 
-
-class User(object):
+class User(Model):
 
     def __init__(self,
                  username,
@@ -21,6 +21,3 @@ class User(object):
         self.body = body
         self.id = id
         self.confirmed = confirmed
-
-    def __eq__(self, other):
-        return self.username == other

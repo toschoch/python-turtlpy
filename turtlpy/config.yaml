@@ -34,3 +34,13 @@ sync:
   enable_files_incoming: true
   enable_files_outgoing: true
   poll_timeout: 25
+
+# configuration integration tests
+integration_tests:
+  data_folder: /tmp/turtl/integration
+  login:
+    username: testdata@turtlapp.com
+    password: omgitsatest
+  v6_login:
+    username: 'duck duck'
+password: 'juice'

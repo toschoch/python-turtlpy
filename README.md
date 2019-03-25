@@ -14,8 +14,8 @@ Change-Log
 * initial version
 
 
-Installation / Usage
---------------------
+Installation
+------------
 
 To install use pip:
 
@@ -26,13 +26,23 @@ Or clone the repo:
 
     git clone https://github.com/toschoch/python-turtlpy.git
     python setup.py install
+
+
     
-Contributing
-------------
+Usage
+-----
 
-TBD
+```python
+    with TurtlClient("http://<server-url>", "<username>", "<password>") as client:
+        # user profile
+        print(client.user)
 
-Example
--------
+        # boards
+        print(client.boards)
 
-TBD
+        # spaces
+        print(client.spaces)
+
+        # ensure synced
+        client.sync()
+```

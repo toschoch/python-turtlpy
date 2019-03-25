@@ -37,13 +37,13 @@ def start(server, server_v2=None):
 
 
     if not ping_pong():
-        log.info("trying to start turtl core...")
+        log.debug("trying to start turtl core...")
         core.start(config)
         r = core.recv_event(True)
         log.debug("received event {}".format(r))
-        return 'e' in r and ['e'] == "messaging:ready"
+        return ('e' in r and  'd' in r) and r['e'] == "messaging:ready" and r['d']
     else:
-        log.info("turtl core is already running...")
+        log.debug("turtl core is already running...")
         return 0
 
 
@@ -87,9 +87,14 @@ def app_connected(id="app_connected"):
     return _check_command_answer(r, id)
 
 
+def wipe_local_data(id="app_wipe-user-data"):
+    r = _send_command(id, "app:wipe-user-data")
+    return _check_command_answer(r, id)
+
+
 def stop(id="app_shutdown"):
     r = _send_command(id, "app:shutdown")
-    return _check_command_answer(r, id)
+    return r == 0
 
 
 def sync_start(id="sync_start"):
@@ -101,6 +106,9 @@ def sync_status(id="sync_status"):
     r = _send_command(id, "sync:status")
     return _check_command_answer(r, id)
 
+def sync_get_pending(id="sync_get-pending"):
+    r = _send_command(id, "sync:get-pending")
+    return _check_command_answer(r, id)
 
 def sync_stop(id="sync_stop"):
     r = _send_command(id, "sync:shutdown")
