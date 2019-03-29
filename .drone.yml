@@ -1,5 +1,9 @@
 kind: pipeline
-name: python-package
+name: build-amd64
+
+platform:
+  os: linux
+  arch: amd64
 
 clone:
   depth: 50
@@ -13,17 +17,53 @@ steps:
   - name: test
     image: python:3
     commands:
-      - pip install --upgrade pip setuptools wheel
+      - pip install --upgrade pip setuptools wheel cython
       - python setup.py test
 
   - name: build
     image: python:3
     commands:
-      - pip install --upgrade pip setuptools wheel
+      - pip install --upgrade pip setuptools wheel cython
       - python setup.py bdist_wheel
       - python setup.py sdist --formats=zip
 
-  - name: publish-staging
+
+
+---
+kind: pipeline
+name: build-arm
+
+platform:
+  os: linux
+  arch: arm
+
+clone:
+  depth: 50
+
+steps:
+  - name: fetch
+    image: docker:git
+    commands:
+      - git fetch --tags
+
+  - name: test
+    image: python:3
+    commands:
+      - pip install --upgrade pip setuptools wheel cython
+      - python setup.py test
+
+  - name: build
+    image: python:3
+    commands:
+      - pip install --upgrade pip setuptools wheel cython
+      - python setup.py bdist_wheel
+      - python setup.py sdist --formats=zip
+
+---
+kind: pipeline
+name: publish
+
+- name: publish-staging
     image: shocki/alpine-devpi-client
     environment:
       DEVPI_USER:
@@ -55,3 +95,11 @@ steps:
     when:
       event:
         - tag
+
+trigger:
+  status:
+    - success
+
+depends_on:
+  - build-arm
+  - build-amd64
