@@ -6,9 +6,9 @@ log = logging.getLogger(__name__)
 
 def test_instantiate():
 
-    with TurtlClient("https://apiv3.turtlapp.com","testuser@gmail.com","test") as client:
+    with TurtlClient("https://apiv3.turtlapp.com","gute@red-mail.info","testuser") as client:
 
-        board = client.get_board("Personal")
+        board = client.get_board("Passwords")
 
         pw = client.add_note(board.create_password("test pw", "don't know", "user", "password", tags=["test"]))
         link = client.add_note(board.create_bookmark("test bookmark", "text", "https", tags=['test']))

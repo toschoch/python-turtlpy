@@ -1,7 +1,12 @@
 from setuptools import setup, find_packages, Extension
 from codecs import open
 from os import path
-from Cython.Build import cythonize
+try:
+    from Cython.Build import cythonize
+except ImportError:
+     def cythonize(*args, **kwargs):
+         from Cython.Build import cythonize
+         return cythonize(*args, **kwargs)
 
 here = path.abspath(path.dirname(__file__))
 
