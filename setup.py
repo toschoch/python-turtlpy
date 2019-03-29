@@ -3,7 +3,7 @@ from codecs import open
 from os import path
 try:
     from Cython.Build import cythonize
-except ImportError:
+except (ImportError, ModuleNotFoundError):
      def cythonize(*args, **kwargs):
          from Cython.Build import cythonize
          return cythonize(*args, **kwargs)
