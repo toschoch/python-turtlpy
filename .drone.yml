@@ -63,7 +63,8 @@ steps:
 kind: pipeline
 name: publish
 
-- name: publish-staging
+steps:
+  - name: publish-staging
     image: shocki/alpine-devpi-client
     environment:
       DEVPI_USER:
